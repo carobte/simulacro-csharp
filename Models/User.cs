@@ -57,7 +57,7 @@ namespace simulacro_csharp.Models
 
         protected void ShowAge()
         {
-            Console.WriteLine($"{Name} {LastName} is {CalculateAge()} years old");
+            Console.WriteLine($"Age: {CalculateAge()} years old");
         }
     }
 }

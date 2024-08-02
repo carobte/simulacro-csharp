@@ -21,7 +21,7 @@ namespace simulacro_csharp.Models
             base.ShowDetailsP();
             Console.WriteLine($"License Number: {LicenseNumber}");
             Console.WriteLine($"License Category: {LicenseCategory}");
-            Console.WriteLine($"Driving Experience: {DrivingExperience}");
+            Console.WriteLine($"Driving Experience: {DrivingExperience} years");
             Console.WriteLine($"_____________________________________________________");
         }
 

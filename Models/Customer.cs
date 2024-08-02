@@ -20,7 +20,7 @@ namespace simulacro_csharp.Models
         {
             base.ShowDetailsP();
             Console.WriteLine($"Membership Level: {MembershipLevel}");
-            Console.WriteLine($"Preferred PaymentMethod: {PreferredPaymentMethod}");
+            Console.WriteLine($"Preferred Payment Method: {PreferredPaymentMethod}");
             Console.WriteLine($"_____________________________________________________");
         }
 

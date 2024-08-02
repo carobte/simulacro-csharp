@@ -11,17 +11,17 @@ namespace simulacro_csharp.Models
         public static List<Customer> Customers = new List<Customer>();
         public static List<Vehicle> Vehicles = new List<Vehicle>();
 
-        public static void ShowDrivers()
+        public static void ShowDrivers(List<Driver> drivers)
         {
-            foreach (var driver in Drivers)
+            foreach (var driver in drivers)
             {
                 driver.ShowDetailsP();
             }
         }
 
-        public static void ShowCustomer()
+        public static void ShowCustomers(List<Customer> customers)
         {
-            foreach (var customer in Customers)
+            foreach (var customer in customers)
             {
                 customer.ShowDetailsP();
             }
@@ -57,9 +57,9 @@ namespace simulacro_csharp.Models
 
         public static void CustomersEG()
         {
-            var customer = new Customer("santi", "pineda", "Cédula", "012345", new DateOnly(1997, 09, 09), "santi@example.com", "3124567894", "av 56 #10", "basic", "credit card");
-            var customer2 = new Customer("kari", "pineda", "Cédula", "987650", new DateOnly(1996, 02, 02), "kari@example.com", "3124567895", "av 33 #10", "premium", "credit card");
-            var customer3 = new Customer("manu", "montoya", "Cédula", "543216", new DateOnly(1996, 05, 02), "manu@example.com", "3124567896", "av 52 #10", "premium", "cash");
+            var customer = new Customer("Santi", "Pineda", "Cédula", "012345", new DateOnly(1997, 09, 09), "santi@example.com", "3124567894", "av 56 #10", "Basic", "Credit card");
+            var customer2 = new Customer("Kari", "Pineda", "Cédula", "987650", new DateOnly(1996, 02, 02), "kari@example.com", "3124567895", "av 33 #10", "Premium", "Credit card");
+            var customer3 = new Customer("Manu", "Montoya", "Cédula", "543216", new DateOnly(1996, 05, 02), "manu@example.com", "3124567896", "av 52 #10", "Premium", "Cash");
 
             Customers.Add(customer);
             Customers.Add(customer2);
