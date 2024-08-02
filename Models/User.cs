@@ -17,7 +17,8 @@ namespace simulacro_csharp.Models
         protected string? PhoneNumber { get; set; }
         protected string? Address { get; set; }
 
-        protected User(string name, string lastName, string typeDocument, string identificationNumber, DateOnly birthdate, string email, string phoneNumber, string address){
+        protected User(string name, string lastName, string typeDocument, string identificationNumber, DateOnly birthdate, string email, string phoneNumber, string address)
+        {
 
             Id = Guid.NewGuid();
             Name = name;
@@ -30,8 +31,8 @@ namespace simulacro_csharp.Models
             Address = address;
         }
 
-        // public because I need to use it on the Admin class
-        public void ShowDetails(){
+        protected  void ShowDetails()
+        {
             Console.WriteLine($"Fullname: {Name} {LastName}");
             Console.WriteLine($"Type of Document {TypeDocument}");
             Console.WriteLine($"Identification Number: {IdentificationNumber}");
@@ -42,11 +43,18 @@ namespace simulacro_csharp.Models
             Console.WriteLine($"Address: {Address}");
         }
 
-        protected int CalculateAge(){
-           return DateTime.Now.Year - Birthdate.Year;
+        public virtual void ShowDetailsP()
+        {
+            ShowDetails();
         }
 
-        protected void ShowAge(){
+        protected int CalculateAge()
+        {
+            return DateTime.Now.Year - Birthdate.Year;
+        }
+
+        protected void ShowAge()
+        {
             Console.WriteLine($"{Name} {LastName} is {CalculateAge()} years old");
         }
     }
