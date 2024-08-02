@@ -18,19 +18,17 @@ namespace simulacro_csharp.Models
             {
                 foreach (var driver in Drivers)
                 {
-                    driver.ShowDetails();
+                    driver.ShowDetailsP();
                 }
             }
             else if (user is Customer)
             {
                 foreach (var customer in Customers)
                 {
-                    customer.ShowDetails();
+                    customer.ShowDetailsP();
                 }
             }
         }
-
-
     }
 }
 
