@@ -15,8 +15,7 @@ namespace simulacro_csharp.Models
         public byte PeopleCapacity { get; set; }
         public Driver Owner { get; set; }
        
-
-        public Vehicle(int id, string placa, string tipo, string engineNumber, string serialNumber, byte peopleCapacity)
+        public Vehicle(int id, string placa, string tipo, string engineNumber, string serialNumber, byte peopleCapacity, Driver owner)
         {
             Id = id;
             Placa = placa;
@@ -24,8 +23,27 @@ namespace simulacro_csharp.Models
             EngineNumber = engineNumber;
             SerialNumber = serialNumber;
             PeopleCapacity = peopleCapacity;
+            Owner = owner;
         }
 
-        // Delete vehicles is on Driver class because it has the list of vehicles and has more sense to go there.
+        public void DeleteVehicle(int id, List<Vehicle> vehicles)
+        {
+            var vehicle = vehicles.Find(vehicle => vehicle.Id == id);
+
+            if (vehicle != null)
+            {
+                Console.WriteLine($"Are you sure you want to delete this vehicle? {vehicle.Id} (yes/no)");
+                var confirmation = Console.ReadLine().ToLower();
+                if (!string.IsNullOrEmpty(confirmation) && confirmation == "yes")
+                {
+                    vehicles.Remove(vehicle);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Sorry. It was not possible to delete the vehicle. Try again");
+            }
+        }
+
     }
 }
