@@ -13,8 +13,11 @@ namespace simulacro_csharp.Models
         public string? EngineNumber { get; set; }
         public string? SerialNumber { get; set; }
         public byte PeopleCapacity { get; set; }
+        public Driver Owner { get; set; }
+       
 
-        public Vehicle(int id, string placa, string tipo, string engineNumber, string serialNumber, byte peopleCapacity){
+        public Vehicle(int id, string placa, string tipo, string engineNumber, string serialNumber, byte peopleCapacity)
+        {
             Id = id;
             Placa = placa;
             Tipo = tipo;
@@ -23,10 +26,6 @@ namespace simulacro_csharp.Models
             PeopleCapacity = peopleCapacity;
         }
 
-        public void DeleteVehicle(int id){
-            
-        }
-
-
+        // Delete vehicles is on Driver class because it has the list of vehicles and has more sense to go there.
     }
 }
