@@ -27,7 +27,7 @@ namespace simulacro_csharp.Models
 
         public void AddExperience(int years)
         {
-            DrivingExperience = years;
+            DrivingExperience += years;
         }
 
         public void DeleteVehicle(int id)
