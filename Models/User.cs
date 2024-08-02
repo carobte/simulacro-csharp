@@ -33,8 +33,10 @@ namespace simulacro_csharp.Models
 
         protected  void ShowDetails()
         {
+            Console.WriteLine($"_____________________________________________________");
+            Console.WriteLine($"");
             Console.WriteLine($"Fullname: {Name} {LastName}");
-            Console.WriteLine($"Type of Document {TypeDocument}");
+            Console.WriteLine($"Type of Document: {TypeDocument}");
             Console.WriteLine($"Identification Number: {IdentificationNumber}");
             Console.WriteLine($"Birthdate: {Birthdate}");
             ShowAge();

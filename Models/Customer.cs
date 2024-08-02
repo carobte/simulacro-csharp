@@ -18,9 +18,10 @@ namespace simulacro_csharp.Models
 
         public override void ShowDetailsP()
         {
-            base.ShowDetails();
+            base.ShowDetailsP();
             Console.WriteLine($"Membership Level: {MembershipLevel}");
             Console.WriteLine($"Preferred PaymentMethod: {PreferredPaymentMethod}");
+            Console.WriteLine($"_____________________________________________________");
         }
 
         public void UpdateMembershipLevel(string newMembershipLevel)

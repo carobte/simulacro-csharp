@@ -18,10 +18,11 @@ namespace simulacro_csharp.Models
         }
 
         public override void ShowDetailsP(){
-            base.ShowDetails();
+            base.ShowDetailsP();
             Console.WriteLine($"License Number: {LicenseNumber}");
             Console.WriteLine($"License Category: {LicenseCategory}");
             Console.WriteLine($"Driving Experience: {DrivingExperience}");
+            Console.WriteLine($"_____________________________________________________");
         }
 
         public void UpdateLicenseCategory(string newCategory)
