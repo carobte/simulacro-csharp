@@ -55,6 +55,10 @@ namespace simulacro_csharp.Models
             return DateTime.Now.Year - Birthdate.Year;
         }
 
+        public virtual int CalculateAgeP(){
+            return CalculateAge();
+        }
+
         protected void ShowAge()
         {
             Console.WriteLine($"Age: {CalculateAge()} years old");
