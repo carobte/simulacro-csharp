@@ -30,11 +30,13 @@ namespace simulacro_csharp.Models
             Address = address;
         }
 
-        protected void ShowDetails(){
+        // public because I need to use it on the Admin class
+        public void ShowDetails(){
             Console.WriteLine($"Fullname: {Name} {LastName}");
             Console.WriteLine($"Type of Document {TypeDocument}");
             Console.WriteLine($"Identification Number: {IdentificationNumber}");
             Console.WriteLine($"Birthdate: {Birthdate}");
+            ShowAge();
             Console.WriteLine($"Email: {Email}");
             Console.WriteLine($"Phone number: {PhoneNumber}");
             Console.WriteLine($"Address: {Address}");
